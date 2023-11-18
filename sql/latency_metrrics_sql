@@ -1,0 +1,84 @@
+
+CREATE TABLE latency_metrics (
+    menu_name VARCHAR(255),
+    latency FLOAT
+);
+
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('', 0.1445150375366211);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('', 0.16667866706848145);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('About', 0.4263570308685303);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Investment Management', 0.2575368881225586);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('World Beyond Fin Tech', 0.16943597793579102);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Solutions', 0.153090238571167);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Our Team', 0.14699292182922363);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Contact us', 0.1577599048614502);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('FAQs', 0.15199995040893555);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('About', 0.13999509811401367);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Investment Management', 0.14185595512390137);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('World Beyond Fin Tech', 0.15383172035217285);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Solutions', 0.16341090202331543);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Our Team', 0.14144492149353027);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Contact us', 0.1265852451324463);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('FAQs', 0.13605189323425293);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('About', 0.1470639705657959);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Investment Management', 0.15158486366271973);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('World Beyond Fin Tech', 0.14046287536621094);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Solutions', 0.17072820663452148);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Our Team', 0.14676189422607422);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Contact us', 0.17210721969604492);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('FAQs', 0.12601113319396973);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Learn More', 0.12613725662231445);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Learn More', 0.1876671314239502);
+    
+    INSERT INTO latency_metrics (menu_name, latency)
+    VALUES ('Privacy Policy', 0.21260499954223633);
+    
