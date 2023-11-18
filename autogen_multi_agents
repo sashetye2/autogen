@@ -1,0 +1,39 @@
+import autogen
+
+print(dir(autogen))
+print(autogen.__version__)
+
+class Agent1(autogen.Agent):
+    def on_message(self, message):
+        print(f"Agent1 received: {message}")
+        # Forward message to manager
+        self.send(message, to=manager)
+
+
+class Agent2(autogen.Agent):
+    def on_message(self, message):
+        print(f"Hello: {message.sender}")
+
+
+# Create agents
+agent1 = Agent1('Agent1')
+agent2 = Agent2('Agent2')
+
+agents = [agent2, agent1]
+
+gcm = autogen.GroupChat(agents,None)
+
+
+# Create manager
+manager = autogen.GroupChatManager(groupchat = gcm)
+
+
+
+
+# Send message from Agent1 to Agent2 via manager
+#agent1.send('Hello Agent2!', to=agent2)
+
+# Manager forwards message to Agent2
+# Output:
+# Agent1 received: Hello World!
+# Agent2 received: Hello World!
