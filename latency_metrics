@@ -1,0 +1,45 @@
+# filename: latency_metrics.py
+
+import requests
+from bs4 import BeautifulSoup
+import matplotlib.pyplot as plt
+import time
+import urllib.parse
+
+# Step 1: Parse the website and find all the menu items
+url = "https://linvest21.ai"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+menu_items = soup.find_all('a')
+
+# Step 2: Send a request to each menu item and measure the time
+latencies = []
+menu_names = []
+for item in menu_items:
+    item_url = item.get('href')
+    if item_url is not None:
+        if item_url.startswith('/'):  # relative url
+            item_url = url + item_url
+        # Check if the URL is valid
+        try:
+            result = urllib.parse.urlparse(item_url)
+            if all([result.scheme, result.netloc]):
+                start_time = time.time()
+                requests.get(item_url)
+                end_time = time.time()
+                latency = end_time - start_time
+                latencies.append(latency)
+                menu_names.append(item.text)
+        except ValueError:
+            continue
+
+# Step 3: Plot the latency metrics
+plt.figure(figsize=(10, 5))
+plt.bar(menu_names, latencies)
+plt.xlabel('Menu Item')
+plt.ylabel('Latency (seconds)')
+plt.title('Latency Metrics for Each Menu on linvest21.ai')
+plt.xticks(rotation=90)
+
+# Step 4: Save the plot to a file
+plt.savefig('linvest21_latency_2.png')
